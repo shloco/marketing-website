@@ -116,7 +116,7 @@ export const Navbar = () => {
             <NavbarMenuItem key={`${item}-${index}`}>
               {item.style === 'button' ? (
                 <Link
-                  className="bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-2 rounded-lg font-medium transition-colors block text-center"
+                  className="bg-purple text-primary-foreground hover:bg-primary/90 px-4 py-2 rounded-lg font-medium transition-colors block text-center"
                   href={item.href}
                   size="lg"
                 >
