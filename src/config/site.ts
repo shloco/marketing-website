@@ -1,3 +1,4 @@
+import BetaPage from '@/pages/beta'
 import PrivacyPage from '@/pages/privacy'
 import TermsPage from '@/pages/terms'
 
@@ -7,6 +8,7 @@ type NavItem = {
   label: string
   href: string
   element?: React.ComponentType
+  style?: 'link' | 'button' | 'text'
 }
 
 export const siteConfig: {
@@ -24,7 +26,14 @@ export const siteConfig: {
 } = {
   name: 'Vite + HeroUI',
   description: 'Make beautiful websites regardless of your design experience.',
-  navItems: [],
+  navItems: [
+    {
+      href: '/beta',
+      label: 'Join the Beta',
+      element: BetaPage,
+      style: 'button',
+    },
+  ],
   footerLinks: [
     { href: '/privacy', label: 'Privacy Policy', element: PrivacyPage },
     { href: '/terms', label: 'Terms of Service', element: TermsPage },

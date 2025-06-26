@@ -31,6 +31,7 @@ export default {
             black: '#1E1E24',
             background: '#5C998C',
             foreground: '#FFFCEB',
+            purple: '#474056',
             layout: {
               background: '#96C0B7',
               foreground: 'black',
