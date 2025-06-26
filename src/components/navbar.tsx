@@ -15,9 +15,9 @@ import clsx from 'clsx'
 
 import { siteConfig } from '@/config/site'
 import { FullLogo, SearchIcon } from '@/components/icons'
-import { Logo } from '@/components/icons'
 
 export const Navbar = () => {
+  // @ts-ignore
   const searchInput = (
     <Input
       aria-label="Search"

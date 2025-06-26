@@ -1,15 +1,6 @@
 import { Link } from '@heroui/link'
 import { siteConfig } from '@/config/site'
 
-const footerLinks = [
-  { href: '/privacy', label: 'Privacy Policy' },
-  { href: '/terms', label: 'Terms of Service' },
-  { href: '/legal', label: 'Legal' },
-  { href: '/cookies', label: 'Cookie Policy' },
-  { href: '/contact', label: 'Contact Us' },
-  { href: '/about', label: 'About' },
-]
-
 export default function Footer() {
   return (
     <footer className="py-8 md:py-12 bg-background">
