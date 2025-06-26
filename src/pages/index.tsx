@@ -42,14 +42,14 @@ function FeatureCard({
 
 const featuresData = [
   {
-    iconSrc: '/public/product.png',
+    iconSrc: '/product.png',
     iconAlt: 'Product Icon',
     iconBgColor: 'bg-foreground',
     title: 'Shoppers',
     description: "Find what you're looking for in your neighborhood",
   },
   {
-    iconSrc: '/public/store.png',
+    iconSrc: '/store.png',
     iconAlt: 'Store Icon',
     iconBgColor: 'bg-layout-background',
     title: 'Retailers',
@@ -57,7 +57,7 @@ const featuresData = [
       'Get your inventory in front of shoppers who are ready to make a purchase',
   },
   {
-    iconSrc: '/public/brand.png',
+    iconSrc: '/brand.png',
     iconAlt: 'Brand Icon',
     iconBgColor: 'bg-foreground',
     title: 'Brands',
@@ -83,7 +83,7 @@ export default function IndexPage() {
           </div>
           <div className="flex-1 flex justify-center md:justify-end">
             <Image
-              src="/public/phone-city-scape.png"
+              src="/phone-city-scape.png"
               alt="Neighborhood shops on your phone"
               width={800}
               className="max-w-full h-auto"
