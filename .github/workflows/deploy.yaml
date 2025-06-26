@@ -27,7 +27,7 @@ jobs:
         run: npm ci # Or `npm install` if you're not using a lockfile
 
       - name: Build project
-        run: tsc && vite build
+        run: npm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
