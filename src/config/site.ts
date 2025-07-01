@@ -1,6 +1,7 @@
 import BetaPage from '@/pages/beta'
 import PrivacyPage from '@/pages/privacy'
 import TermsPage from '@/pages/terms'
+import ContactPage from '@/pages/contact'
 
 export type SiteConfig = typeof siteConfig
 
@@ -37,6 +38,12 @@ export const siteConfig: {
   footerLinks: [
     { href: '/privacy', label: 'Privacy Policy', element: PrivacyPage },
     { href: '/terms', label: 'Terms of Service', element: TermsPage },
+    {
+      href: '/contact',
+      label: 'Contact Us',
+      element: ContactPage,
+      style: 'link',
+    },
     // { href: '/terms', label: 'Terms of Service' },
     // { href: '/legal', label: 'Legal' },
     // { href: '/cookies', label: 'Cookie Policy' },
