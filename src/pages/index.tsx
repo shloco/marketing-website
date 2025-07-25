@@ -44,14 +44,14 @@ const featuresData = [
   {
     iconSrc: '/product.png',
     iconAlt: 'Product Icon',
-    iconBgColor: 'bg-foreground',
+    iconBgColor: 'bg-purple',
     title: 'Shoppers',
     description: "Find what you're looking for in your neighborhood",
   },
   {
     iconSrc: '/store.png',
     iconAlt: 'Store Icon',
-    iconBgColor: 'bg-layout-background',
+    iconBgColor: 'bg-purple',
     title: 'Retailers',
     description:
       'Get your inventory in front of shoppers who are ready to make a purchase',
@@ -59,7 +59,7 @@ const featuresData = [
   {
     iconSrc: '/brand.png',
     iconAlt: 'Brand Icon',
-    iconBgColor: 'bg-foreground',
+    iconBgColor: 'bg-purple',
     title: 'Brands',
     description: 'Connect with shoppers and retailers in one platform',
   },

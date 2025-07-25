@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@anolilab/unplugin-favicons": "^1.0.5",
     "@heroui/button": "2.2.22",
     "@heroui/code": "2.2.16",
     "@heroui/dropdown": "2.3.22",
@@ -26,6 +27,7 @@
     "@react-aria/visually-hidden": "3.8.25",
     "@react-types/shared": "3.30.0",
     "clsx": "2.1.1",
+    "favicons": "^7.2.0",
     "framer-motion": "11.15.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
