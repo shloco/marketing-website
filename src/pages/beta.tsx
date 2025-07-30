@@ -7,9 +7,10 @@ import { Image } from '@heroui/image'
 
 // Image URLs for the carousel - update these with your actual image URLs
 const carouselImages = [
-  '/Browse.png', // Replace with your first image URL
-  '/Smell.png', // Replace with your second image URL
-  '/Corner.png', // Replace with your third image URL
+  '/browse-screen.png',
+  '/smell-screen.png',
+  '/corner-screen.png',
+  '/store-screen.png',
 ]
 
 export default function BetaPage() {
@@ -27,32 +28,38 @@ export default function BetaPage() {
             </div>
           </div>
         </div>
+      </section>
 
-        {/* Image Carousel - Full Width */}
-        <div className="w-full bg-background py-4 -mx-4 sm:-mx-6 md:-mx-8 lg:-mx-12 xl:-mx-16">
-          <div className="overflow-x-auto overflow-y-hidden">
-            <div className="flex gap-4 md:justify-center justify-start pb-2 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
-              {carouselImages.map((imageUrl, index) => (
-                <div
-                  key={index}
-                  className="flex-shrink-0 h-80 overflow-hidden transition-transform transform"
-                >
-                  <Image
-                    src={imageUrl}
-                    alt={`Beta app screenshot ${index + 1}`}
-                    className="h-full w-auto object-contain"
-                    classNames={{
-                      wrapper: 'h-full w-auto',
-                      img: 'h-full w-auto object-contain',
-                    }}
-                    radius="lg"
-                  />
-                </div>
-              ))}
+      {/* Image Carousel - Full Width Outside Section */}
+      <div
+        className="bg-background overflow-x-auto overflow-y-hidden"
+        style={{
+          width: '100vw',
+          marginLeft: 'calc(-50vw + 50%)',
+        }}
+      >
+        <div className="flex gap-4 md:justify-center justify-start">
+          {carouselImages.map((imageUrl, index) => (
+            <div
+              key={index}
+              className="flex-shrink-0 h-80 overflow-hidden transition-transform transform"
+            >
+              <Image
+                src={imageUrl}
+                alt={`Beta app screenshot ${index + 1}`}
+                className="h-full w-auto object-contain"
+                classNames={{
+                  wrapper: 'h-full w-auto',
+                  img: 'h-full w-auto object-contain',
+                }}
+                radius="lg"
+              />
             </div>
-          </div>
+          ))}
         </div>
+      </div>
 
+      <section className="flex flex-col items-center justify-center gap-8 py-8 md:py-16">
         <div className="flex flex-col items-center justify-center gap-6 max-w-3xl mx-auto text-center px-4">
           {/* Instructions */}
           <div className="bg-background rounded-lg shadow-card p-6 md:p-8 max-w-2xl w-full">
