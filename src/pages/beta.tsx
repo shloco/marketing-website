@@ -4,14 +4,7 @@ import { Link } from '@heroui/link'
 import { title, subtitle } from '@/components/primitives'
 import DefaultLayout from '@/layouts/default'
 import { Image } from '@heroui/image'
-
-// Image URLs for the carousel - update these with your actual image URLs
-const carouselImages = [
-  '/browse-screen.png',
-  '/smell-screen.png',
-  '/corner-screen.png',
-  '/store-screen.png',
-]
+import Carousel from '@/components/image-carousel'
 
 export default function BetaPage() {
   return (
@@ -30,34 +23,7 @@ export default function BetaPage() {
         </div>
       </section>
 
-      {/* Image Carousel - Full Width Outside Section */}
-      <div
-        className="bg-background overflow-x-auto overflow-y-hidden"
-        style={{
-          width: '100vw',
-          marginLeft: 'calc(-50vw + 50%)',
-        }}
-      >
-        <div className="flex gap-4 md:justify-center justify-start">
-          {carouselImages.map((imageUrl, index) => (
-            <div
-              key={index}
-              className="flex-shrink-0 h-80 overflow-hidden transition-transform transform"
-            >
-              <Image
-                src={imageUrl}
-                alt={`Beta app screenshot ${index + 1}`}
-                className="h-full w-auto object-contain"
-                classNames={{
-                  wrapper: 'h-full w-auto',
-                  img: 'h-full w-auto object-contain',
-                }}
-                radius="lg"
-              />
-            </div>
-          ))}
-        </div>
-      </div>
+      <Carousel />
 
       <section className="flex flex-col items-center justify-center gap-8 py-8 md:py-16">
         <div className="flex flex-col items-center justify-center gap-6 max-w-3xl mx-auto text-center px-4">

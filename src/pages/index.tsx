@@ -1,3 +1,4 @@
+import Carousel from '@/components/image-carousel'
 import { title, subtitle } from '@/components/primitives'
 import DefaultLayout from '@/layouts/default'
 import { Image } from '@heroui/image'
@@ -107,6 +108,7 @@ export default function IndexPage() {
           </div>
         </div>
       </section>
+      <Carousel backgroundColor="" />
     </DefaultLayout>
   )
 }
