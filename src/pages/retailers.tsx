@@ -1,11 +1,9 @@
-import Carousel from '@/components/image-carousel'
 import { title, subtitle } from '@/components/primitives'
 import ScreenshotCarousel from '@/components/screen-shot-carousel'
 import DefaultLayout from '@/layouts/default'
 import { Image } from '@heroui/image'
 
 import {
-  IconAd,
   IconAdCircle,
   IconClock,
   IconDeviceAnalytics,
@@ -27,7 +25,6 @@ function RetailerFeature({
   icon,
   iconSrc,
   iconAlt,
-  iconBgColor,
   comingSoon,
   title: featureTitle,
   description,
