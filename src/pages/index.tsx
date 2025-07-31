@@ -2,6 +2,7 @@ import Carousel from '@/components/image-carousel'
 import { title, subtitle } from '@/components/primitives'
 import DefaultLayout from '@/layouts/default'
 import { Image } from '@heroui/image'
+import { Link } from '@heroui/link'
 
 interface FeatureCardProps {
   iconSrc: string
@@ -9,6 +10,7 @@ interface FeatureCardProps {
   iconBgColor: string
   title: string
   description: string
+  href?: string
 }
 
 function FeatureCard({
@@ -17,9 +19,10 @@ function FeatureCard({
   iconBgColor,
   title: cardTitle,
   description,
+  href,
 }: FeatureCardProps) {
-  return (
-    <div className="bg-background rounded-lg p-6 shadow-card hover:shadow-card-hover hover:-translate-x-px hover:-translate-y-px transition-all duration-200 flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-6">
+  const CardContent = () => (
+    <div className="bg-background rounded-lg p-6 shadow-card hover:shadow-card-hover hover:-translate-x-px hover:-translate-y-px transition-all duration-200 flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-6 relative">
       <div className="flex-shrink-0">
         <div
           className={`w-16 h-16 ${iconBgColor} rounded-full flex items-center justify-center overflow-hidden p-3`}
@@ -37,8 +40,26 @@ function FeatureCard({
         <h3 className={title({ size: 'sm' })}>{cardTitle}</h3>
         <p className={subtitle({ class: 'mt-2' })}>{description}</p>
       </div>
+      {href && (
+        <div className="self-end text-sm text-primary font-medium flex items-center gap-1 mt-2 md:mt-0">
+          Learn More →
+        </div>
+      )}
     </div>
   )
+
+  if (href) {
+    return (
+      <Link
+        href={href}
+        className="block no-underline"
+      >
+        <CardContent />
+      </Link>
+    )
+  }
+
+  return <CardContent />
 }
 
 const featuresData = [
@@ -48,6 +69,7 @@ const featuresData = [
     iconBgColor: 'bg-purple',
     title: 'Shoppers',
     description: "Find what you're looking for in your neighborhood",
+    href: '/beta',
   },
   {
     iconSrc: '/store.png',
@@ -103,6 +125,7 @@ export default function IndexPage() {
                 iconBgColor={feature.iconBgColor}
                 title={feature.title}
                 description={feature.description}
+                href={feature.href}
               />
             ))}
           </div>
