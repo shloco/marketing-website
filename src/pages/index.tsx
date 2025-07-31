@@ -78,6 +78,7 @@ const featuresData = [
     title: 'Retailers',
     description:
       'Get your inventory in front of shoppers who are ready to make a purchase',
+    href: '/retailers',
   },
   {
     iconSrc: '/brand.png',

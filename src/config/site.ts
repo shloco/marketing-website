@@ -2,6 +2,7 @@ import BetaPage from '@/pages/beta'
 import PrivacyPage from '@/pages/privacy'
 import TermsPage from '@/pages/terms'
 import ContactPage from '@/pages/contact'
+import RetailersPage from '@/pages/retailers'
 
 export type SiteConfig = typeof siteConfig
 
@@ -28,6 +29,11 @@ export const siteConfig: {
   name: 'Vite + HeroUI',
   description: 'Make beautiful websites regardless of your design experience.',
   navItems: [
+    {
+      href: '/retailers',
+      label: 'Retailers',
+      element: RetailersPage,
+    },
     {
       href: '/beta',
       label: 'Join the Beta',

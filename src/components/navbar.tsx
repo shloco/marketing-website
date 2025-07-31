@@ -69,7 +69,10 @@ export const Navbar = () => {
       >
         <div className="flex gap-4 justify-end">
           {siteConfig.navItems.map((item) => (
-            <NavbarItem key={item.href}>
+            <NavbarItem
+              key={item.href}
+              className="content-center"
+            >
               {item.style === 'button' ? (
                 <Link
                   className={clsx(
@@ -131,6 +134,7 @@ export const Navbar = () => {
                   color="foreground"
                   href={item.href}
                   size="lg"
+                  className="py-2 w-full text-center block"
                 >
                   {item.label}
                 </Link>
