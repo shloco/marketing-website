@@ -1,4 +1,6 @@
+import Carousel from '@/components/image-carousel'
 import { title, subtitle } from '@/components/primitives'
+import ScreenshotCarousel from '@/components/screen-shot-carousel'
 import DefaultLayout from '@/layouts/default'
 import { Image } from '@heroui/image'
 
@@ -31,9 +33,9 @@ function RetailerFeature({
   description,
 }: RetailerFeatureProps) {
   return (
-    <div className="rounded-lg shadow-card duration-200 flex flex-col overflow-hidden bg-blue-light">
+    <div className="rounded-lg shadow-card duration-200 flex flex-col overflow-hidden relative">
       {/* Header: Icon + Title */}
-      <div className="flex items-center gap-4 bg-blue-dark p-2">
+      <div className="flex items-center gap-4 bg-background p-2 relative overflow-hidden">
         <div
           className={`w-12 h-12 aspect-square  rounded-full flex items-center justify-center overflow-hidden p-2`}
         >
@@ -49,27 +51,25 @@ function RetailerFeature({
             />
           )}
         </div>
-        <h3 className={subtitle({ size: 'sm', class: 'text-white' })}>
-          {featureTitle}
-        </h3>
+        <h3 className={subtitle({ class: 'text-white' })}>{featureTitle}</h3>
       </div>
       {/* Body: Description */}
-      <div className="bg-blue-light p-4 text-center md:text-left">
-        <p className={subtitle({ class: 'mt-0' })}>{description}</p>
+      <div className="p-4 text-center md:text-left ">
+        <p className={subtitle({ class: `mt-0 ${comingSoon ? 'pb-2' : ''}` })}>
+          {description}
+        </p>
+        {/* Coming Soon Banner */}
+        {comingSoon && (
+          <div className="absolute bottom-4 -right-8 bg-yellow-100 text-black text-xs font-medium px-10 py-1 transform -rotate-[30deg] origin-center z-10">
+            Coming Soon
+          </div>
+        )}
       </div>
     </div>
   )
 }
 
 const retailerFeatures: RetailerFeatureProps[] = [
-  {
-    iconSrc: '/store.png',
-    iconAlt: 'Digital Storefront Icon',
-    iconBgColor: 'bg-blue-100',
-    title: 'Digital Storefront',
-    description:
-      'Showcase your entire inventory online with professional product listings that attract more customers to your store.',
-  },
   {
     icon: <IconMap2 />,
     iconAlt: 'Local Discovery Icon',
@@ -94,6 +94,7 @@ const retailerFeatures: RetailerFeatureProps[] = [
     icon: <IconDeviceAnalytics />,
     iconBgColor: 'bg-purple-100',
     title: 'Shopper Insights',
+    comingSoon: true,
     description:
       'Understand your customers better with detailed analytics on browsing patterns, popular products, and shopping preferences.',
   },
@@ -134,9 +135,28 @@ export default function RetailersPage() {
           </div>
         </div>
       </section>
+      <ScreenshotCarousel
+        items={[
+          {
+            src: '/carousels/retailer/map.png',
+            alt: 'Store previewo on map',
+            label: 'Show up on the map',
+          },
+          {
+            src: '/carousels/retailer/search-results.png',
+            alt: 'Search Results',
+            label: 'and in the search results',
+          },
+          {
+            src: '/carousels/retailer/inventory.png',
+            alt: 'Inventory',
+            label: 'and your dedicated store page',
+          },
+        ]}
+      />
 
       {/* Features Section */}
-      <section className="py-8 md:py-16">
+      <section className="py-8">
         <div className="w-full md:max-w-5xl md:mx-auto md:px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             {retailerFeatures.map((feature, index) => (

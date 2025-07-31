@@ -7,7 +7,13 @@ const carouselImages = [
   '/store-screen.png',
 ]
 
-export default function Carousel({ backgroundColor = 'bg-background' }) {
+export default function Carousel({
+  backgroundColor = 'bg-background',
+  images = carouselImages,
+}: {
+  backgroundColor?: string
+  images?: string[]
+}) {
   return (
     <div
       className={` ${backgroundColor} overflow-x-auto overflow-y-hidden`}
@@ -17,7 +23,7 @@ export default function Carousel({ backgroundColor = 'bg-background' }) {
       }}
     >
       <div className="flex gap-4 md:justify-center justify-start">
-        {carouselImages.map((imageUrl, index) => (
+        {images.map((imageUrl, index) => (
           <div
             key={index}
             className="flex-shrink-0 h-80 overflow-hidden transition-transform transform"
