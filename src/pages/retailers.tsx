@@ -68,7 +68,7 @@ function RetailerFeature({
 
 const retailerFeatures: RetailerFeatureProps[] = [
   {
-    icon: <IconMap2 />,
+    icon: <IconMap2 strokeWidth={1} />,
     iconAlt: 'Local Discovery Icon',
     iconBgColor: 'bg-yellow-100',
     title: 'Local Discovery',
@@ -78,7 +78,7 @@ const retailerFeatures: RetailerFeatureProps[] = [
   {
     iconSrc: '/product.png',
     iconAlt: 'Inventory Management Icon',
-    icon: <IconClock />,
+    icon: <IconClock strokeWidth={1} />,
     iconBgColor: 'bg-green-100',
     title: 'Real-Time Inventory',
     comingSoon: true,
@@ -88,7 +88,7 @@ const retailerFeatures: RetailerFeatureProps[] = [
   {
     iconSrc: '/brand.png',
     iconAlt: 'Customer Analytics Icon',
-    icon: <IconDeviceAnalytics />,
+    icon: <IconDeviceAnalytics strokeWidth={1} />,
     iconBgColor: 'bg-purple-100',
     title: 'Shopper Insights',
     comingSoon: true,
@@ -98,7 +98,7 @@ const retailerFeatures: RetailerFeatureProps[] = [
   {
     iconSrc: '/product.png',
     iconAlt: 'Promoted Content',
-    icon: <IconAdCircle />,
+    icon: <IconAdCircle strokeWidth={1} />,
     iconBgColor: 'bg-red-100',
     title: 'Marketing Tools',
     description:
@@ -142,7 +142,7 @@ export default function RetailersPage() {
           {
             src: '/carousels/retailer/search-results.png',
             alt: 'Search Results',
-            label: 'and in the search results',
+            label: 'in search results',
           },
           {
             src: '/carousels/retailer/inventory.png',
