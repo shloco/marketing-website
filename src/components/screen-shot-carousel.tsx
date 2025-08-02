@@ -42,7 +42,10 @@ export default function ScreenshotCarousel({
                   wrapper: 'w-full flex justify-center',
                   img: 'h-full w-auto object-cover object-top border-4 border-black',
                 }}
-                radius="lg"
+                style={{
+                  borderRadius: '30px',
+                }}
+                radius="none"
               />
             </div>
           </div>
